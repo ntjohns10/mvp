@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  margin:  20%;
+  justify-content: center;
+  text-align: center;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+}
+.card {
+  display: block;
+  margin:  2%;
+  min-width: 160px;
+  justify-content: center;
+  text-align: center;
+}
+
+.name {
+  justify-content: center;
+  text-align: center;
+}
+.app {
+  display: flex;
+}
