@@ -19,10 +19,10 @@ class Visit extends React.Component{
 
   onSubmit(e) {
     e.preventDefault(e);
-
     axios.post('http://localhost:3000/visit', this.state)
     .then((res)=> {console.log('visit logged')})
-    .then(() => {this.props.onClick(e)})
+    .then(() => {this.onClick(e)})
+
     .catch((err) => {
       console.log('unable to log visit')
     })
@@ -31,6 +31,7 @@ class Visit extends React.Component{
   onClick(e) {
     e.preventDefault();
     this.props.onClick(e)
+    this.props.getVisitCount()
   }
 
 

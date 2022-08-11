@@ -11,6 +11,7 @@ class Card extends React.Component {
       visitCount: false
     }
     this.onClick = this.onClick.bind(this)
+    this.getVisitCount = this.getVisitCount.bind(this)
   }
 
   getDistance(meters) {
@@ -18,6 +19,10 @@ class Card extends React.Component {
 }
 
   componentDidMount(){
+    this.getVisitCount();
+  }
+
+  getVisitCount(){
     axios.get('/count', {params : {restaurant_id: this.props.restaurant.id}})
     .then((count) => this.setState({visitCount: count.data}))
   }
@@ -41,7 +46,7 @@ render() {
     borderRadius: '1%',
   }}></div>
 
-  const visit = <Visit id={this.props.restaurant.id} onClick={this.onClick}/>
+  const visit = <Visit id={this.props.restaurant.id} onClick={this.onClick} getVisitCount={this.getVisitCount}/>
 
   return(
     <div className="card" >

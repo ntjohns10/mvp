@@ -23,11 +23,12 @@ app.post('/visit', (req, res) => {
 
 app.get('/count', (req, res) => {
   console.log(req.query)
-  countVisits(req.query, (err, docs) => {
+  countVisits(req, (err, docs) => {
     if(err) {
       console.log(err)
       res.status(400).end();
     } else {
+      console.log(docs)
       res.status(200).end(JSON.stringify(docs))
     }
   })
