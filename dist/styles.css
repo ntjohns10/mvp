@@ -19,12 +19,48 @@
   min-width: 160px;
   justify-content: center;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  transition: .3s;
+}
+
+div.card:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  min-width: 200px
+}
+
+#comments {
+  width: 100%;
+  min-height: 130px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+
+
+.app {
+  display: flex;
 }
 
 .name {
   justify-content: center;
   text-align: center;
+  margin: 3px
 }
-.app {
+
+.rating {
+  padding-left: '30%';
+  justify-content: center;
+  display: block;
+}
+
+.stars {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
